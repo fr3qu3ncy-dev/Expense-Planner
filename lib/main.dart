@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _addNewTransaction(String title, double amount, DateTime date) {
     final newTx = Transaction(
-        id: Uuid().toString(), title: title, amount: amount, date: date);
+        id: Uuid().v1(), title: title, amount: amount, date: date);
     setState(() {
       _userTransactions.add(newTx);
       print('Added transaction ${newTx.date}');
